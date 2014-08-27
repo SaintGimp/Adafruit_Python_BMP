@@ -21,7 +21,7 @@
 import logging
 import time
 
-import gimpbbio.I2C as I2C
+import gimpbbio.i2c as i2c
 
 
 # BMP085 default address.
@@ -56,14 +56,14 @@ BMP085_READPRESSURECMD   = 0x34
 
 class BMP085(object):
 	def __init__(self, mode=BMP085_STANDARD, address=BMP085_I2CADDR, 
-							 busnum=I2C.get_default_bus()):
+							 busnum=i2c.get_default_bus()):
 		self._logger = logging.getLogger('Adafruit_BMP.BMP085')
 		# Check that mode is valid.
 		if mode not in [BMP085_ULTRALOWPOWER, BMP085_STANDARD, BMP085_HIGHRES, BMP085_ULTRAHIGHRES]:
 			raise ValueError('Unexpected mode value {0}.  Set mode to one of BMP085_ULTRALOWPOWER, BMP085_STANDARD, BMP085_HIGHRES, or BMP085_ULTRAHIGHRES'.format(mode))
 		self._mode = mode
 		# Create I2C device.
-		self._device = I2C.Device(address, busnum)
+		self._device = i2c.Device(address, busnum)
 		# Load calibration values.
 		self._load_calibration()
 
