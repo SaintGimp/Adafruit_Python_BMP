@@ -9,6 +9,6 @@ setup(name 				= 'Adafruit_BMP',
 	  description		= 'Library for accessing the BMP series pressure and temperature sensors like the BMP085/BMP180 on a Raspberry Pi or Beaglebone Black.',
 	  license			= 'MIT',
 	  url				= 'https://github.com/adafruit/Adafruit_Python_BMP/',
-	  dependency_links	= ['https://github.com/adafruit/Adafruit_Python_GPIO/tarball/master#egg=Adafruit-GPIO-0.2.0'],
-	  install_requires	= ['Adafruit-GPIO>=0.2.0'],
+	  #dependency_links	= ['https://github.com/adafruit/Adafruit_Python_GPIO/tarball/master#egg=Adafruit-GPIO-0.2.0'],
+	  #install_requires	= ['Adafruit-GPIO>=0.2.0'],
 	  packages 			= find_packages())

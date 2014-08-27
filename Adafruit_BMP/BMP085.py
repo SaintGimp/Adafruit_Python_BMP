@@ -21,7 +21,7 @@
 import logging
 import time
 
-import Adafruit_GPIO.I2C as I2C
+import gimpbbio.I2C as I2C
 
 
 # BMP085 default address.
